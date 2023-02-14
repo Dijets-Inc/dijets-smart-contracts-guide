@@ -1,0 +1,50 @@
+{
+  "name": "dijets-smart-contracts-guide",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.0",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.7.1",
+    "dijets": "1.0.0",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethereumjs-tx": "^2.1.2",
+    "ethers": "^5.4.5",
+    "hardhat": "2.6.1",
+    "ts-node": "^10.2.1",
+    "web3": "^1.5.2"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/Dijets-Inc/dijets-smart-contracts-guide",
+  "author": "Saleem Farid <saleem@dijets.io>",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "compile": "npx hardhat compile",
+    "console": "npx hardhat console",
+    "pretest": "yarn compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "erc20": "npx hardhat run scripts/erc20.ts",
+    "nft": "npx hardhat run scripts/nft.ts --network mainnet",
+    "storage": "npx hardhat run scripts/storage.ts",
+    "send-dijets-wallet-signer": "npx hardhat run scripts/sendDijetsWalletSigner.ts",
+    "send-dijets-json-provider": "npx hardhat run scripts/sendDijetsJSONProvider.ts",
+    "lint": "prettier ./test/**/*.ts --check",
+    "prepublishOnly": "yarn test",
+    "hardhat": "npx hardhat",
+    "accounts": "npx hardhat accounts",
+    "balances": "npx hardhat balances",
+    "fund-cchain-addresses": "npx hardhat run scripts/fund-cchain-addresses.js"
+  },
+  "dependencies": {
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  }
+}
